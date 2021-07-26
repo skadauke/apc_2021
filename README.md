@@ -1,6 +1,6 @@
 # Teaching Pathologists to Code, or: How To Fix the Data Literacy Crisis In Medical Education
 
-This repository contains materials for a discussion session held for the Association for Pathology Chairs Annual Meeting on 07/27/2021. 
+This repository contains materials for a discussion session held for the Association for Pathology Chairs Annual Meeting on 07/27/2021.
 
 ## About the instructors
 

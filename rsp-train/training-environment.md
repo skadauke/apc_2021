@@ -83,11 +83,12 @@ export RSP_LICENSE=XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX &&
 
 export GH_REPO=https://github.com/skadauke/apc_2021 &&
 
-sudo rm -rf r-training-lecture-uams-2021 &&
+cd ~ &&
+sudo rm -rf apc_2021 &&
 
 git clone $GH_REPO &&
 
-cd apc_r2021 &&
+cd apc_2021 &&
 
 sudo docker run --privileged -it \
     --detach-keys "ctrl-a" \

@@ -52,8 +52,10 @@ sudo systemctl start nginx &&
 sudo systemctl enable nginx
 ```
 
-```
-MY_DOMAIN=api-r.cloud &&
+Test if host is reachable: http://apc.r-training.cloud
+
+```bash
+export MY_DOMAIN=apc.r-training.cloud &&
 
 sudo snap install --classic certbot &&
 sudo ln -s /snap/bin/certbot /usr/bin/certbot &&
@@ -85,17 +87,17 @@ sudo rm -rf r-training-lecture-uams-2021 &&
 
 git clone $GH_REPO &&
 
-cd api_r2021 &&
+cd apc_r2021 &&
 
 sudo docker run --privileged -it \
     --detach-keys "ctrl-a" \
     --restart unless-stopped \
     -p 8787:8787 -p 5559:5559 \
-    -e USER_PREFIX=apir \
-    -e N_USERS=100 \
+    -e USER_PREFIX=apc \
+    -e N_USERS=150 \
     -e PW_SEED=12345 \
     -e GH_REPO=$GH_REPO \
-    -e R_PACKAGES=rmarkdown,shiny,DT,flexdashboard,plotly \
+    -e R_PACKAGES=rmarkdown \
     -e RSP_LICENSE=$RSP_LICENSE \
     -v "$PWD/rsp-train/custom-login":/etc/rstudio \
     skadauke/rsp-train
